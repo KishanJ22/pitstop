@@ -1,0 +1,17 @@
+{
+  "name": "pitstop",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "apps/api/**",
+    "apps/ui/**"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "2.4.16",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
