@@ -8,6 +8,7 @@ import {
   SidebarMenu,
   SidebarMenuItem,
 } from "./shadcn/ui/sidebar";
+import { Image } from "@unpic/react";
 
 const AppSidebar = () => {
   return (
@@ -17,9 +18,18 @@ const AppSidebar = () => {
         <SidebarGroup>
           <SidebarMenu>
             <SidebarMenuItem>
-              <Link to="/" className="font-semibold">
-                Pitstop
-              </Link>
+              <div className="flex flex-row gap-x-2 items-center">
+                <Image
+                  src="/main_logo.png"
+                  alt="Pitstop Logo"
+                  layout="constrained"
+                  height={30}
+                  width={30}
+                />
+                <Link to="/" className="font-semibold text-3xl">
+                  Pitstop
+                </Link>
+              </div>
             </SidebarMenuItem>
             <SidebarMenuItem>Dashboard</SidebarMenuItem>
           </SidebarMenu>
