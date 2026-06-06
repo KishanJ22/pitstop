@@ -24,6 +24,16 @@
       "quoteStyle": "double"
     }
   },
+  "overrides": [
+    {
+      "includes": ["**/components/shadcn/ui/**"],
+      "linter": {
+        "rules": {
+          "correctness": "off"
+        }
+      }
+    }
+  ],
   "assist": {
     "enabled": true,
     "actions": {

@@ -1,16 +1,14 @@
 import { Link } from "@tanstack/react-router";
+import { Image } from "@unpic/react";
+import type { PropsWithChildren } from "react";
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarGroup,
-  SidebarGroupLabel,
   SidebarHeader,
   SidebarMenuItem,
-  SidebarSeparator,
 } from "./shadcn/ui/sidebar";
-import { Image } from "@unpic/react";
-import type { PropsWithChildren } from "react";
 
 interface AppSidebarNavItemProps {
   to: string;
