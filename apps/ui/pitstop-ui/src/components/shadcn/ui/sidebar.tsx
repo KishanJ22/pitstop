@@ -238,7 +238,7 @@ function Sidebar({
         <div
           data-sidebar="sidebar"
           data-slot="sidebar-inner"
-          className="flex size-full flex-col bg-surface-base group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:shadow-sm group-data-[variant=floating]:ring-1 group-data-[variant=floating]:ring-sidebar-border"
+          className="flex size-full flex-col bg-surface-base group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:shadow-sm group-data-[variant=floating]:ring-1 group-data-[variant=floating]:ring-surface-lighter"
         >
           {children}
         </div>
@@ -355,7 +355,10 @@ function SidebarSeparator({
     <Separator
       data-slot="sidebar-separator"
       data-sidebar="separator"
-      className={cn("mx-2 w-auto bg-sidebar-border", className)}
+      className={cn(
+        "w-auto bg-surface-lightest border-b border-b-surface-lightest",
+        className,
+      )}
       {...props}
     />
   );
@@ -396,7 +399,7 @@ function SidebarGroupLabel({
     props: mergeProps<"div">(
       {
         className: cn(
-          "flex h-8 shrink-0 items-center rounded-md px-2 text-xs font-medium text-sidebar-foreground/70 ring-sidebar-ring outline-hidden transition-[margin,opacity] duration-200 ease-linear group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
+          "flex h-8 shrink-0 items-center rounded-md px-2 text-sm font-bold text-neutral-lightest/70 ring-surface-lightest outline-hidden transition-[margin,opacity] duration-200 ease-linear group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
           className,
         ),
       },
@@ -420,7 +423,7 @@ function SidebarGroupAction({
     props: mergeProps<"button">(
       {
         className: cn(
-          "absolute top-3.5 right-3 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-sidebar-foreground ring-sidebar-ring outline-hidden transition-transform group-data-[collapsible=icon]:hidden after:absolute after:-inset-2 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 md:after:hidden [&>svg]:size-4 [&>svg]:shrink-0",
+          "absolute top-3.5 right-3 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-neutral-lightest ring-surface-lightest outline-hidden transition-transform group-data-[collapsible=icon]:hidden after:absolute after:-inset-2 hover:bg-surface-lightest hover:text-neutral-lightest focus-visible:ring-2 md:after:hidden [&>svg]:size-4 [&>svg]:shrink-0",
           className,
         ),
       },
