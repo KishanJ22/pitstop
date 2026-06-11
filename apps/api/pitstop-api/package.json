@@ -4,15 +4,30 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "bun run --hot src/app.ts"
+    "dev": "bun run --hot src/app.ts",
+    "github-spec-gen": "openapi-typescript ./src/lib/github/github-openapi.yaml -o ./src/lib/github/github-openapi-spec.d.ts"
   },
   "dependencies": {
+    "@hono/zod-openapi": "^1.4.0",
     "@loglayer/hono": "^2.3.0",
     "@loglayer/transport-pino": "^3.2.0",
     "@loglayer/transport-simple-pretty-terminal": "^3.2.0",
+    "@sinclair/typebox": "^0.34.49",
+    "better-auth": "^1.6.15",
+    "dotenv": "^17.4.2",
     "hono": "^4.12.23",
+    "kysely": "^0.29.2",
     "loglayer": "^9.3.0",
+    "openapi-fetch": "^0.17.0",
+    "pg": "^8.21.0",
     "pino": "^10.3.1",
-    "serialize-error": "^13.0.1"
+    "serialize-error": "^13.0.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.20.0",
+    "kysely-codegen": "^0.20.0",
+    "kysely-ctl": "^0.21.0",
+    "openapi-typescript": "^7.13.0"
   }
 }

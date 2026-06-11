@@ -22,9 +22,9 @@ const pinoTransport = new PinoTransport({
   logger: pinoLogger,
 });
 
-const logger = new LogLayer({
+export const logger = new LogLayer({
   errorSerializer: serializeError,
-  transport: pinoTransport,
+  transport: prettyTransport,
 });
 
 export const customHonoLogLayer = honoLogLayer({ instance: logger });
