@@ -50,7 +50,7 @@ const githubReposGet = defineOpenAPIRoute({
 			.GET("/users/{username}/repos", {
 				params: {
 					path: {
-						username: "",
+						username: "KishanJ22",
 					},
 					query: {
 						type: "owner",

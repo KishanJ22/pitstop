@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "bun run --hot src/app.ts",
-    "github-spec-gen": "openapi-typescript ./src/lib/github/github-openapi.yaml -o ./src/lib/github/github-openapi-spec.d.ts"
+    "github-spec-gen": "openapi-typescript ./src/lib/github/github-openapi.yaml -o ./src/lib/github/github-openapi-spec.d.ts",
+    "openapi-gen": "bun run src/scripts/generate-openapi.ts"
   },
   "dependencies": {
     "@hono/zod-openapi": "^1.4.0",
