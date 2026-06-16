@@ -44,6 +44,8 @@ const configSchema = Type.Object({
 		github: Type.Object({
 			apiVersion: Type.String(),
 			devAuthToken: Type.String(),
+			clientId: Type.String(),
+			secret: Type.String(),
 		}),
 	}),
 });
@@ -80,6 +82,8 @@ export const config: ConfigSchema = {
 		github: {
 			apiVersion: process.env.GITHUB_API_VERSION!,
 			devAuthToken: process.env.GITHUB_DEV_AUTH_TOKEN!,
+			clientId: process.env.GITHUB_CLIEND_ID!,
+			secret: process.env.GITHUB_SECRET!,
 		},
 	},
 };
